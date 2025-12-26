@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AbsolutDeals | Oversized T-Shirts</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.btn {
+    display: block;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+}
+
+.cart-btn {
+    background: #444;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AbsolutDeals</h1>
+    <p>Premium Oversized T-Shirts</p>
+</header>
+
+<div class="container">
+    <h2>Our Products</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1520974735194-3caa5d63aa63" alt="Tshirt">
+            <h3>Black Oversized Tee</h3>
+            <p class="price">₹799</p>
+            <a class="btn cart-btn" onclick="addToCart('Black Oversized Tee')">Add to Cart</a>
+            <a class="btn" href="https://wa.me/918401677526?text=I%20want%20to%20buy%20Black%20Oversized%20Tee%20from%20AbsolutDeals">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1520975928318-3f7e7dd5b0c1" alt="Tshirt">
+            <h3>White Oversized Tee</h3>
+            <p class="price">₹749</p>
+            <a class="btn cart-btn" onclick="addToCart('White Oversized Tee')">Add to Cart</a>
+            <a class="btn" href="https://wa.me/918401677526?text=I%20want%20to%20buy%20White%20Oversized%20Tee%20from%20AbsolutDeals">Buy Now</a>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 AbsolutDeals</p>
+    <p>Free Shipping above ₹850 | Delivery within 7 days</p>
+</footer>
+
+<script>
+let cart = [];
+
+function addToCart(product) {
+    cart.push(product);
+    alert(product + " added to cart!");
+}
+</script>
+
+</body>
+</html>
